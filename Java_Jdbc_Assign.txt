@@ -8,17 +8,9 @@ insert into products values(3, 'Crayons Rainbow_Sachin', 12);
 insert into products values(4, 'Notebook_Sachin', 14);
 insert into products values(5, 'Draw Sheet_Sachin', 16);
 insert into products values(6, 'Brush Air_Sachin', 5);
- select *from products;
+ select * from products;
  create table cartdata(pid int primary key, qty int);
 insert into cartdata values(1,2);
 insert into cartdata values(2,3);
 insert into cartdata values(3,5);
-
-Question:-1
-select sum(qty*price) from cartdata,products where cartdata.pid=products.pid;
-
-Question:-2
-select products.pname from cartdata,products where qty*price>50 and products.pid=cartdata.pid;
-
-Question:-3
-select distinct products.pname,products.pid from products,cartdata where products.pid>3;
+select * from cartdata;
